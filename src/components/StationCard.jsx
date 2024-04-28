@@ -20,7 +20,6 @@ function StationCard({ station }) {
         <p className="text-sm md:text-base text-gray-700">
           Country: {station.country}
         </p>
-        {/* <p className="text-sm text-gray-600 italic">Tags: {station.tags}</p> */}
         <div>
           {loading && <div>Loading audio...</div>}
           {error && <div>Error loading audio. Try again later.</div>}

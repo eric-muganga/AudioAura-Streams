@@ -35,7 +35,7 @@ export const Navigation = () => {
           className="text-sm text-blue-gray-600 p-1 font-normal"
         >
           <NavLink
-            to={`continents/${continent.replace(/\s+/g, "-")}`} // Replace spaces with hyphens for URL
+            to={`${continent.replace(/\s+/g, "-")}`} // Replace spaces with hyphens for URL
             onClick={closeNav}
             className={({ isActive }) => navItemClass(isActive)}
           >
@@ -55,16 +55,6 @@ export const Navigation = () => {
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
 
-          {/* <div className="flex items-center gap-x-1">
-            <Button
-              variant="text"
-              size="sm"
-              color="indigo"
-              className="hidden lg:inline-block"
-            >
-              Start Listening
-            </Button>
-          </div> */}
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -104,14 +94,7 @@ export const Navigation = () => {
           </IconButton>
         </div>
       </div>
-      <Collapse open={openNav}>
-        {navList}
-        {/* <div className="flex items-center gap-x-1">
-          <Button fullWidth variant="text" size="sm" color="indigo">
-            <span>Start Listening</span>
-          </Button>
-        </div> */}
-      </Collapse>
+      <Collapse open={openNav}>{navList}</Collapse>
     </Navbar>
   );
 };

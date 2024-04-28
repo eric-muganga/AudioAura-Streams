@@ -27,14 +27,14 @@ export default function Main() {
             className="hover:bg-indigo-800"
             onClick={toggleMenu} // Toggle menu on button click
           >
-            Start Listening
+            Start Streaming
           </Button>
           {showMenu && (
             <div className="mt-4 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 absolute w-full lg:w-1/4 transform -translate-x-1/2 lg:translate-x-0 left-1/2 lg:left-auto">
               {continents.map((continent) => (
                 <NavLink
                   key={continent}
-                  to={`continents/${continent.replace(/\s+/g, "-")}`} // Replace spaces with hyphens for URL
+                  to={`${continent.replace(/\s+/g, "-")}`} // Replace spaces with hyphens for URL
                   className="block px-4 py-2 text-sm text-indigo-700 hover:bg-indigo-500 hover:text-white rounded-md transition-colors duration-150"
                 >
                   {continent}

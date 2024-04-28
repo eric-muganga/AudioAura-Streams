@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/continents/:continent",
+        path: ":continent",
         element: (
           <Suspense
             fallback={

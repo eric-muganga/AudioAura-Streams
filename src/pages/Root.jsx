@@ -5,8 +5,11 @@ import Footer from "../components/Footer";
 function Root() {
   return (
     <div className="flex flex-col min-h-[100vh]">
+      {console.log("RootPage rendering")}
       <Navigation />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
