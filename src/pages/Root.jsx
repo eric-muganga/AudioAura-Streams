@@ -8,7 +8,9 @@ function Root() {
       {console.log("RootPage rendering")}
       <Navigation />
       <main>
+        {console.log("Before outlet")}
         <Outlet />
+        {console.log("After outlet")}
       </main>
       <Footer />
     </div>

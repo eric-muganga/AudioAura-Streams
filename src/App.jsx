@@ -7,7 +7,7 @@ import { CircularProgress } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import Root from "./pages/Root";
 const ContinentPage = lazy(() => import("./pages/ContinentPage"));
-import NotFoundPage from "./pages/NotFoundPage";
+import ErrorPage from "./pages/NotFoundPage";
 import { loader as stationsLoader } from "./pages/ContinentPage";
 import { queryClient } from "./utils";
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <NotFoundPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
