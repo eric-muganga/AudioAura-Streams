@@ -6,9 +6,16 @@ import cors from 'cors';
 const app = express();
 
 // Enable CORS for all routes
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:4173', // Adjust this if your front-end URL changes
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+};
 
-const port = 4173; // Port number for the server
+app.use(cors(corsOptions));
+
+const port = 443; // Port number for the server
 
 // Async function to fetch stations by country
 async function fetchStationsByCountry(country) {
