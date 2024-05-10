@@ -5,7 +5,7 @@
     {
       "src": "/(.*)",
       "dest": "index.js",
-      "Methods": ["GET", "POST", "OPTIONS", "PATCH"],
+      "methods": ["GET", "POST", "OPTIONS", "PATCH"],
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Credentials": true
