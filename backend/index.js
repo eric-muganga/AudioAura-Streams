@@ -7,7 +7,7 @@ const app = express();
 
 // Enable CORS for all routes
 const corsOptions = {
-    origin: '*', // Adjust this if your front-end URL changes
+    origin: 'http://localhost:4173', // Adjust this if your front-end URL changes
     methods: '*',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
@@ -15,7 +15,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const port = 443; // Port number for the server
+const port = 4173; // Port number for the server
 
 // Async function to fetch stations by country
 async function fetchStationsByCountry(country) {
