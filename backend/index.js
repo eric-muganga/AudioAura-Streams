@@ -5,15 +5,15 @@ import cors from 'cors';
 
 const app = express();
 
-// Enable CORS for all routes
-const corsOptions = {
-    origin: 'http://localhost:4173', // Adjust this if your front-end URL changes
-    methods: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-};
+// // Enable CORS for all routes
+// const corsOptions = {
+//     origin: '*', // Adjust this if your front-end URL changes
+//     methods: '*',
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     credentials: true,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors({ origin: "*" }));
 
 const port = 4173; // Port number for the server
 
