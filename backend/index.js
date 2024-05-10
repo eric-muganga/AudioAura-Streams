@@ -8,7 +8,7 @@ const app = express();
 // Enable CORS for all routes
 app.use(cors());
 
-const port = 443; // Port number for the server
+const port = 4173; // Port number for the server
 
 // Async function to fetch stations by country
 async function fetchStationsByCountry(country) {
