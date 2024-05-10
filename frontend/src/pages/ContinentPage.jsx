@@ -22,7 +22,6 @@ function ContinentPage() {
 
   return (
     <>
-      {console.log("ContinentPage rendering")}
       <RadioStations stations={stations} />;
     </>
   );
@@ -32,7 +31,6 @@ export default ContinentPage;
 
 export async function loader({ params }) {
   const continent = params.continent.replace(/-/g, "");
-  console.log("Loader function for", continent);
   return queryClient.fetchQuery({
     queryKey: ["stations", continent],
     queryFn: async () => await fetchStationsByContinent(continent),
