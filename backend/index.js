@@ -13,10 +13,11 @@ const app = express();
 //     credentials: true,
 // };
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    next();
-});
+const corsOptions = {
+    origin: '*',  // Or whichever domain your frontend is on
+};
+
+app.use(cors(corsOptions));
 
 const port = 4173; // Port number for the server
 
