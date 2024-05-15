@@ -7,22 +7,9 @@ const app = express();
 
 
 app.use(cors({
-    origin: "http://localhost:4173"
+    origin: "*"
 }))
 
-// // Enable CORS for all routes
-// const corsOptions = {
-//     origin: '*', // Adjust this if your front-end URL changes
-//     methods: '*',
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials: true,
-// };
-
-// const corsOptions = {
-//     origin: '*',  // Or whichever domain your frontend is on
-// };
-
-// app.use(cors(corsOptions));
 
 const port = 4173; // Port number for the server
 
