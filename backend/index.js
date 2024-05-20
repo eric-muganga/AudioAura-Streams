@@ -6,8 +6,7 @@ import cors from 'cors';
 const app = express();
 
 
-app.use(cors({
-}))
+app.use(cors())
 
 
 const port = 4173; // Port number for the server
