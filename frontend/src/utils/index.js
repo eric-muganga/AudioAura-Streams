@@ -5,7 +5,7 @@ export const queryClient = new QueryClient();
 
 export const fetchStationsByContinent = async (continent) => {
     // Updating the URL to point to your backend server
-    const backendUrl = `https://audio-aura-streams-backend-8q85tqrxy-eric-mugangas-projects.vercel.app/stations/${continent}`;
+    const backendUrl = `${import.meta.env.VITE_REACT_APP_API_URL}/stations/${continent}`;
 
     try {
         // Making a single request to your backend
