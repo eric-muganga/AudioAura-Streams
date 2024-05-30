@@ -6,7 +6,12 @@ import cors from 'cors';
 const app = express();
 
 
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5173', // to Replace with your frontend origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204
+}));
 
 
 const port = 4173; // Port number for the server
